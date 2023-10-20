@@ -1,9 +1,12 @@
 import styles from './About.module.scss';
+import PageTitle from '../PageTitle/PageTitle';
 
-const About = () => {
+const About = props => {
     return (
         <div>
-            <h3>About</h3>
+             <PageTitle> About </PageTitle >
         </div>
     );
 };
+
+export default About;

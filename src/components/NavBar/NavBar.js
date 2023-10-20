@@ -1,15 +1,14 @@
 import styles from './NavBar.module.scss';
 
 const NavBar = () => {
-
-    return(
-        <nav className={styles.navigation}> 
-            <div className={styles.container}>
-                <span className={styles.icon}><i className="tasks"></i></span>
+    return (
+        <nav className={styles.containerNav}>
+            <span className={styles.pictogram + ' fa fa-tasks'} />
+            <div className={styles.navigation}>
                 <ul>
-                    <li>Home</li>
-                    <li>Favorite</li>
-                    <li>About</li>
+                    <li><a href="/" >Home</a></li>
+                    <li><a href="/favorite">Favorite</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </div>
         </nav>
@@ -17,3 +16,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
