@@ -4,20 +4,22 @@ import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
+import { searchCard } from '../../redux/store';
+
 const SearchForm = () => {
 
-    const [searchText, setSearchText] = useState('');
+    const [search, setSearch] = useState('');
     const dispatch = useDispatch();
     
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({ type: 'SEARCH_CARD', payload: {searchText} });
-        setSearchText('');
+        dispatch(searchCard(search));
+        setSearch('');
     };
 
     return (
         <form className={styles.searchForm} onSubmit={handleSubmit}>
-            <TextInput placeholder="Search..." vallue={searchText} onChange={(e) => setSearchText(e.target.value)} />
+            <TextInput placeholder="Search..." vallue={search} onChange={(e) => setSearch(e.target.value)} />
             <Button>
                 <span className="fa fa-search" />
             </Button>
