@@ -10,6 +10,7 @@ export const getColumnsByList = (state, listId) => {
   return columns.filter(column => column.listId === listId);
 };
 
+export const getAllLists = state => state.lists;
 
 export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId)
 
