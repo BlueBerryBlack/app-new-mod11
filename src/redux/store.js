@@ -26,6 +26,9 @@ export const addCard = payload => ({ type: 'ADD_CARD', payload });
 
 export const searchCard = payload => ({ type: 'SEARCH_CARD', payload });
 
+export const addList = payload => ({type: 'ADD_LIST', payload});
+
+
 //reducer
 
 const reducer = (state, action) => {
@@ -33,6 +36,9 @@ const reducer = (state, action) => {
     case 'ADD_COLUMN':
       return { ...state, columns: [...state.columns, { ...action.payload, id: shortid() }] };
    
+    case 'ADD_LIST':
+      return {...action, lists: [...state.lists, {...action.payload, id: shortid() }]};
+
       case 'SEARCH_CARD':
         return { ...state, search: action.payload };
   
