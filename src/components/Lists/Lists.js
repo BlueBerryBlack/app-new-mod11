@@ -17,7 +17,7 @@ const Lists = () => {
                         </Link>
                     ))}
             </section>
-      );
+    );
 };
 
 export default Lists;
