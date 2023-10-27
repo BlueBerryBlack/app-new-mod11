@@ -28,6 +28,8 @@
 .navigation ul li a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: bold;
 }
 
 .pictogram {
@@ -36,7 +38,7 @@
     padding: 15px;
 }
 
-.linkActive {
+.navigation .linkActive {
     color: $color-warning;
 }
 
